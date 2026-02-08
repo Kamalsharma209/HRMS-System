@@ -1,0 +1,14 @@
+<h2 style="text-align:center;">Deactive Employees</h2>
+
+<table>
+    <tr><th>Code</th><th>Name</th><th>Action</th></tr>
+
+    <tr th:each="e:${list}">
+        <td th:text="${e.empCode}"></td>
+        <td th:text="${e.name}"></td>
+        <td>
+            <a th:href="@{/activate/{c}(c=${e.empCode})}">Activate</a>
+        </td>
+    </tr>
+
+</table>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Search</title>
+</head>
+
+<body>
+
+<h2>Employee Search</h2>
+
+<form method="post" th:action="@{/find}">
+    <input name="empCode" placeholder="Employee Code" required>
+    <button type="submit">Find</button>
+</form>
+
+<!-- SHOW ONLY IF EMPLOYEE EXISTS -->
+<div th:if="${emp != null}">
+    <p>
+        Name:
+        <span th:text="${emp.name}"></span>
+    </p>
+
+    <p>
+        Ref:
+        <span th:text="${emp.empRef}"></span>
+    </p>
+</div>
+
+<!-- SHOW IF NOT FOUND -->
+<div th:if="${emp == null and searched}">
+    <p style="color:red;">Employee Not Found</p>
+</div>
+
+</body>
+</html>
