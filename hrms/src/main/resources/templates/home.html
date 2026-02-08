@@ -1,31 +1,17 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <link rel="stylesheet" href="/css/style.css">
-    <title>HRMS</title>
-</head>
+<link rel="stylesheet" href="/style.css">
 
-<body>
+<div class="header"><h1>HRMS Solution</h1></div>
 
-<div class="header">
-    <h1>HRMS Solution</h1>
-</div>
-
-<div class="welcome-bar">
-    <div>Welcome ADMIN</div>
+<div class="welcome">
+    <span>Welcome ADMIN</span>
     <a href="/logout" class="logout">Log Out</a>
 </div>
 
 <div class="dashboard">
-
     <a href="/onboard" class="card onboard">Emp. Onboard</a>
     <a href="/document" class="card document">Document Upload</a>
     <a href="/photo" class="card photo">Photo Upload</a>
     <a href="/modify" class="card modify">Emp. Modify</a>
     <a href="/active" class="card active">Active Employee</a>
     <a href="/deactive" class="card deactive">DeActive Emp.</a>
-
 </div>
-
-</body>
-</html>

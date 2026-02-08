@@ -1,8 +1,11 @@
-<div class="form-container">
-    <h2>Photo Upload</h2>
-    <form method="post" enctype="multipart/form-data" action="/uploadPhoto">
+<link rel="stylesheet" href="/style.css">
+
+<div class="container">
+    <h2>Upload Employee Photo</h2>
+
+    <form method="post" action="/uploadPhoto" enctype="multipart/form-data">
         <input name="empCode" placeholder="Employee Code">
         <input type="file" name="file">
-        <button>Upload</button>
+        <button>Upload Photo</button>
     </form>
 </div>

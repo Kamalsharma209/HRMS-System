@@ -1,14 +1,18 @@
-<h2 style="text-align:center;">Active Employees</h2>
+<link rel="stylesheet" href="/style.css">
 
-<table>
-    <tr><th>Code</th><th>Name</th><th>Action</th></tr>
+<div class="container">
+    <h2>Active Employees</h2>
 
-    <tr th:each="e:${list}">
-        <td th:text="${e.empCode}"></td>
-        <td th:text="${e.name}"></td>
-        <td>
-            <a th:href="@{/deactivate/{c}(c=${e.empCode})}">Deactivate</a>
-        </td>
-    </tr>
+    <table>
+        <tr><th>Code</th><th>Name</th><th>Action</th></tr>
 
-</table>
+        <tr th:each="e:${list}">
+            <td th:text="${e.empCode}"></td>
+            <td th:text="${e.name}"></td>
+            <td>
+                <a th:href="@{/deactivate/{c}(c=${e.empCode})}">Deactivate</a>
+            </td>
+        </tr>
+
+    </table>
+</div>
