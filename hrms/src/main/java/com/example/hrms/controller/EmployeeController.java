@@ -54,7 +54,12 @@ public class EmployeeController {
         return "search";
     }
 
-    @PostMapping("/uploadPhoto")
+    @GetMapping("/photoUpload")
+    public String uploadPage() {
+        return "upload";
+    }
+
+    @PostMapping("/photoUpload")
     public String upload(@RequestParam String empCode,
                          @RequestParam MultipartFile file) throws Exception {
 
