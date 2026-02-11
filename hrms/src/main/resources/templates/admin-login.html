@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>HRMS Admin Login</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+
+<body>
+
+<div class="login-wrapper">
+
+    <div class="login-box">
+
+        <h1 class="title">HRMS Solution</h1>
+
+        <img th:src="@{/images/logoo.png}" width="150">
+
+        <h3 class="welcome">Welcome to HRMS Solution</h3>
+
+        <form method="post" action="/login">
+
+            <label>User Name</label>
+            <input type="text" name="username" placeholder="Enter username" required>
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter password" required>
+
+            <button type="submit">Log In</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
