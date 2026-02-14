@@ -1,26 +1,44 @@
 spring:
   application:
     name: Hrms
+
   servlet:
     multipart:
       max-file-size: 5MB
       max-request-size: 5MB
-  mongodb:
-    uri: mongodb://localhost:27017/hrms_db
+
+  data:
+    mongodb:
+      url: mongodb://localhost:27017/hrms_db
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: kamalsharma6020@gmail.com
+    password: arta cquv jenx fpvh
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          ssl:
+            trust: smtp.gmail.com
+
+
 
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
   endpoint:
     prometheus:
       enabled: true
-
-
-
-
-
-
-
-

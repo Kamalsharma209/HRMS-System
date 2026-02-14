@@ -17,9 +17,10 @@ public class Employee {
     private String empCode;
     private String empRef;
     private String name;
+    private String email;   // ✅ ADD THIS
+
     private boolean active;
     private String photoPath;
     private String documentPath;
     private String photoId;
-
 }

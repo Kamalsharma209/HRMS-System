@@ -1,9 +1,12 @@
 package com.example.hrms.controller;
 
 import com.example.hrms.module.Employee;
+import com.example.hrms.service.DocumentMessageProducer;
+import com.example.hrms.service.EmailProducer;
 import com.example.hrms.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -22,6 +25,12 @@ public class EmployeeController {
 
     private final EmployeeService service;
 
+    private final DocumentMessageProducer producer;
+
+    private final EmailProducer emailProducer;
+
+
+
     @GetMapping("/login")
     public String login() {
         return "admin-login";
@@ -39,10 +48,19 @@ public class EmployeeController {
 
     @PostMapping("/save")
     public String save(Employee e) {
+
         e.setActive(true);
         service.save(e);
+
+        // ✅ STEP 5 — SEND WELCOME EMAIL MESSAGE
+        emailProducer.sendWelcomeEmail(
+                e.getEmail(),
+                e.getName()
+        );
+
         return "redirect:/home";
     }
+
 
     @GetMapping("/search")
     public String searchPage(Model model) {
@@ -116,8 +134,12 @@ public class EmployeeController {
         e.setDocumentPath(fileName);
         service.save(e);
 
+        // ✅ STEP 5 — SEND MESSAGE TO RABBITMQ
+        producer.sendDocumentMessage(empCode, file.getOriginalFilename());
+
         return "redirect:/home";
     }
+
 
     @GetMapping("/modify")
     public String modifyPage() {

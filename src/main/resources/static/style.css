@@ -1,7 +1,8 @@
+/* RESET */
 body{
-    font-family: Arial;
-    background:#dcdcdc;
     margin:0;
+    font-family: Arial, sans-serif;
+    background:#e6e6e6;
 }
 
 /* HEADER */
@@ -23,11 +24,13 @@ body{
     justify-content:space-between;
     padding:15px 25px;
     background:white;
-    border-bottom:3px solid blue;
+    border-bottom:3px solid #0b43d6;
+    color:#0b43d6;
 }
 
+/* LOGOUT */
 .logout{
-    color:blue;
+    color:#0b43d6;
     font-weight:bold;
     text-decoration:none;
 }
@@ -37,36 +40,61 @@ body{
     background:white;
     width:95%;
     max-width:450px;
-    margin:20px auto;
-    padding:20px;
-    border-radius:5px;
+    margin:25px auto;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* TITLES */
 h2{
     color:#0b43d6;
     border-bottom:3px solid #0b43d6;
-    padding-bottom:5px;
+    padding-bottom:6px;
+    margin-bottom:15px;
+}
+
+/* LABELS */
+label{
+    font-weight:bold;
+    display:block;
+    margin-top:10px;
 }
 
 /* INPUTS */
-input,select{
+input, select{
     width:100%;
     padding:12px;
-    margin:8px 0;
+    margin-top:6px;
+    margin-bottom:12px;
     border:1px solid #ccc;
-    border-radius:5px;
+    border-radius:6px;
+    font-size:14px;
+}
+
+/* INPUT FOCUS EFFECT */
+input:focus{
+    border-color:#0b43d6;
+    outline:none;
+    box-shadow:0 0 5px rgba(11,67,214,0.3);
 }
 
 /* BUTTON */
 button{
     width:100%;
     padding:12px;
-    background:#3b74a6;
+    background:#1f4e79;
     color:white;
     border:none;
-    border-radius:5px;
+    border-radius:6px;
     font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#163d5c;
+    transform:scale(1.02);
 }
 
 /* DASHBOARD */
@@ -84,10 +112,16 @@ button{
     text-align:center;
     color:white;
     font-weight:bold;
-    border:3px solid black;
+    border-radius:8px;
     text-decoration:none;
+    transition:0.3s;
 }
 
+.card:hover{
+    transform:scale(1.05);
+}
+
+/* CARD COLORS */
 .onboard{background:#a6b91a;}
 .document{background:#36a7b0;}
 .photo{background:#e6b3b3;color:black;}
@@ -99,84 +133,42 @@ button{
 table{
     width:100%;
     border-collapse:collapse;
+    background:white;
 }
 
 th{
     background:#6d88a8;
     color:white;
-    padding:10px;
+    padding:12px;
 }
 
 td{
-    padding:10px;
+    padding:12px;
     border:1px solid #ddd;
 }
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #e6e6e6;
+
+/* LOGIN PAGE */
+.login-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 }
 
-.login-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.login-box{
+    background:white;
+    padding:30px;
+    width:350px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+    text-align:center;
 }
 
-.login-box {
-    background: white;
-    padding: 30px;
-    width: 350px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    text-align: center;
+.title{
+    color:#0a33cc;
 }
 
-.title {
-    color: #0a33cc;
-    margin-bottom: 10px;
-}
-
-.logo {
-    width: 120px;
-    margin: 10px 0;
-}
-
-.welcome {
-    border-bottom: 3px solid blue;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    color: #0a33cc;
-}
-
-label {
-    display: block;
-    text-align: left;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 25px;
-    background: #1f4e79;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #163d5c;
+.logo{
+    width:120px;
+    margin:10px 0;
 }

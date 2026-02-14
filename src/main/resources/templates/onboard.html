@@ -4,9 +4,18 @@
     <h2>Employee Onboard</h2>
 
     <form method="post" action="/save">
-        <input name="empCode" placeholder="Code">
+
+        <input name="empCode" placeholder="Code" required>
+
         <input name="empRef" placeholder="Reference">
-        <input name="name" placeholder="Name">
+
+        <input name="name" placeholder="Name" required>
+
+        <!-- ✅ NEW EMAIL FIELD -->
+        <input type="email" name="email"
+               placeholder="Employee Email" required>
+
         <button>Save</button>
+
     </form>
 </div>
