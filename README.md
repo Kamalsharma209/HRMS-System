@@ -40,7 +40,7 @@ MySQL Database
 
 * Employee Management (Create, Read, Update, Delete)
 * RESTful API design
-* Database integration with MySQL
+* Database integration with MYSQL
 * Layered architecture (Controller → Service → Repository)
 * Swagger API documentation
 * Scalable backend structure
