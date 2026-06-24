@@ -2,6 +2,7 @@ package com.example.hrms.module;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "employees")
@@ -23,4 +24,11 @@ public class Employee {
     private String photoPath;
     private String documentPath;
     private String photoId;
+
+    private String password;
+    private String role; // ADMIN or EMPLOYEE
+
+    @Indexed(unique = true)
+    private String username;
+
 }
