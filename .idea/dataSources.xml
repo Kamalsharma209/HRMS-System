@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="hrms_db@localhost" uuid="de12116b-ad2d-4d10-84be-eb220bf8142a">
+    <data-source source="LOCAL" name="mongodb@localhost" uuid="b9d6f845-2a7b-49a2-b01f-afcbd26c600c">
       <driver-ref>mongo.4</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
-      <remarks>$PROJECT_DIR$/hrms/src/main/resources/application.yaml</remarks>
+      <remarks>$PROJECT_DIR$/src/main/resources/application.yaml</remarks>
       <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
-      <jdbc-url>mongodb://localhost:27017/hrms_db</jdbc-url>
+      <jdbc-url>mongodb://localhost:27017</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.host.port" />
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
